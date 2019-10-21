@@ -12,6 +12,7 @@ RUN apt-get install -y --no-install-recommends \
     git \
     curl \
     ca-certificates \
+    mosquitto \
     mosquitto-clients
 
 RUN git clone https://github.com/andrewjfreyer/monitor.git /monitor
