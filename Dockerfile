@@ -1,5 +1,5 @@
-FROM debian:stretch-slim
-LABEL Maintainer="Jordan Janzen <https://github.com/jordandrako>"
+FROM debian:stable-slim
+LABEL Maintainer="Kevin Woley <https://github.com/kmwoley>"
 
 RUN apt-get update
 RUN apt-get install -y --no-install-recommends \
