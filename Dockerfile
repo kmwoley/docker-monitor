@@ -19,6 +19,11 @@ RUN apt-get update \
 
 RUN git clone https://github.com/andrewjfreyer/monitor.git /monitor
 
+RUN cd /monitor \
+    # Docker images don't have systemctl - this is a hack to supress errors
+    && sed -i 's|systemctl is-active.*|SERVICE_ACTIVE=false|' support/init \
+    && sed -i 's|systemctl|#systemctl|' monitor.sh
+    
 RUN mkdir /config
 
 VOLUME /config
