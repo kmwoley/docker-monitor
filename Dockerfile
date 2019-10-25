@@ -4,16 +4,17 @@ LABEL Maintainer="Kevin Woley <https://github.com/kmwoley>"
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
         bash \
+        bc \        
         bluetooth \
         bluez \
         bluez-hcidump \
-        bc \
-        usbutils \
-        git \
-        curl \
         ca-certificates \
+        curl \
+        git \
         mosquitto \
         mosquitto-clients \
+        procps \
+        usbutils \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
